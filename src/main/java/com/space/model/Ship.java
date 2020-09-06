@@ -221,47 +221,39 @@ public class Ship {
     }
 
     public void update(Ship newShip) {
-        boolean changed = false;
         String name = newShip.getName();
         if (isValidString(name)) {
             this.name = name;
-            changed = true;
         }
 
         String planet = newShip.getPlanet();
         if (isValidString(planet)) {
             this.planet = planet;
-            changed = true;
         }
 
         ShipType shipType = newShip.getShipType();
         if (Objects.nonNull(shipType)) {
             this.shipType = shipType;
-            changed = true;
         }
 
         Date prodDate = newShip.getProdDate();
         if (Objects.nonNull(prodDate)) {
             this.prodDate = prodDate;
-            changed = true;
         }
 
         Boolean isUsed = newShip.getUsed();
         if (Objects.nonNull(isUsed)) {
             this.isUsed = isUsed;
-            changed = true;
         }
 
         Double speed = newShip.getSpeed();
         if (Objects.nonNull(speed)) {
             this.speed = speed;
-            changed = true;
         }
 
         Integer crewSize = newShip.getCrewSize();
         if (Objects.nonNull(crewSize)) {
             this.crewSize = crewSize;
-            changed = true;
         }
 
         calculateRating();
